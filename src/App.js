@@ -1,17 +1,22 @@
-import logo from './logo.svg';
 import React from "react";
 import Sidebar from './Components/Sidebar/Sidebar'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
-import './App.css';
+import MainArea from './Components/MainArea/MainArea'
+// import ListNotes from './Components/ListNotes/ListNotes'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+// import DisplayNote from './Components/DisplayNote/DisplayNote'
 
 function App() {
-  return (
-    <Router>
-        <Sidebar />
+    return (
+        <Router>
+            <Sidebar />
 
-        
-    </Router>
-  );
+            <Routes>
+                {/*<Route path="/" exact component={ListNotes} />*/}
+                <Route path="/edit" exact element={<MainArea/>} />
+                {/*<Route path="/displayNote/:id" exact component={DisplayNote} />*/}
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
