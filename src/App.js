@@ -1,9 +1,9 @@
 import React from "react";
 import Sidebar from './Components/Sidebar/Sidebar'
 import MainArea from './Components/MainArea/MainArea'
-// import ListNotes from './Components/ListNotes/ListNotes'
+import ListNotes from './Components/ListNotes/ListNotes'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
-// import DisplayNote from './Components/DisplayNote/DisplayNote'
+import DisplayNote from './Components/DisplayNote/DisplayNote'
 
 function App() {
     return (
@@ -11,9 +11,9 @@ function App() {
             <Sidebar />
 
             <Routes>
-                {/*<Route path="/" exact component={ListNotes} />*/}
+                <Route path="/" exact element={<ListNotes/>} />
                 <Route path="/edit" exact element={<MainArea/>} />
-                {/*<Route path="/displayNote/:id" exact component={DisplayNote} />*/}
+                <Route path="/displayNote/:id" exact element={<DisplayNote/>} />
             </Routes>
         </Router>
     );
