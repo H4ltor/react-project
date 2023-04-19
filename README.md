@@ -5,8 +5,8 @@ Ce projet à été réaliser en rect, via la commande npx create react app. Ce q
 
 ### `npm start`
 
-Veuillez lancez la commande'npm start' pour initialiser le projet
-Ouvré ensuite [http://localhost:3000](http://localhost:3000) pour voir l'application sur votre navigateur web
+Veuillez lancez la commande'npm start' pour initialiser le projet.
+Ouvrer ensuite [http://localhost:3000](http://localhost:3000) pour voir l'application sur votre navigateur web
 
 
 ### Conclusion
