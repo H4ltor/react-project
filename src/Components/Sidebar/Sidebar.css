@@ -1,5 +1,7 @@
 .container-sidebar {
     display: flex;
+    height: 100%;
+    max-height: 100vh;
     transition: transform 0.2s ease-out;
     position: absolute;
     left: 0;
@@ -11,7 +13,6 @@
 .sidebar {
     flex-shrink: 0;
     width: 7rem;
-    height: 100vh;
     background: #000;
 }
 

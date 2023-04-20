@@ -1,6 +1,9 @@
+body {
+    background-color: lightblue;
+}
+
 .container-content {
-    min-height: 100vh;
-    background: lightblue;
+    max-height: 100vh;
     box-sizing: border-box;
     padding: 30px 50px;
     position: absolute;
@@ -11,6 +14,7 @@
 .container-content h2 {
     text-align: center;
     font-size: 40px;
+    margin: 0;
 }
 .container-content label, .container-content input {
     display: block;
@@ -32,7 +36,7 @@
 .container-content textarea {
     margin-top: 10px;
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     border-radius: 5px;
     border: none;
     padding: 10px;
@@ -41,7 +45,7 @@
 
 .container-content button {
     padding: 12px 25px;
-    margin-top: 10px;
+    margin-top: 20px;
     border: none;
     border-radius: 3px;
     font-size: 20px;

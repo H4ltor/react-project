@@ -3,15 +3,16 @@
     grid-template-columns: repeat(auto-fit, 280px);
     grid-gap: 20px;
     justify-content: center;
+    align-content: flex-start;
     list-style-type: none;
-    background: lightblue;
+    overflow: auto;
+    height: calc(100vh - 120px);
+    padding: 0;
     margin-top: 35px;
 }
 
 .notes-list-card li {
-    width: 280px;
     height: auto;
-    background: pink;
     padding: 20px;
     background: #f1f1f1;
     border-radius: 20px;

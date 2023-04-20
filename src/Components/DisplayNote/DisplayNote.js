@@ -13,7 +13,7 @@ export default function DisplayNote() {
     return (
         <div className="display-txt-zone">
             <h2 className="title-display">
-                Votre note : {notes[indexArticle] ? `${notes[indexArticle].title}` : ""}
+                {notes[indexArticle] ? `${notes[indexArticle].title}` : ""}
             </h2>
             <span className="subtitle-display">
         {notes[indexArticle] ? `${notes[indexArticle].subtitle}` : ""}
