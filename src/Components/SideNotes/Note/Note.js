@@ -4,7 +4,6 @@ import delIcon from "./remove.svg";
 import edit from "./edit.svg";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-//LES NOTES PRESENTE DANS LE SIDENOTE 3.
 export default function Note(props) {
   console.log(props);
 

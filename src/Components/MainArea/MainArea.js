@@ -2,15 +2,12 @@ import React, {useState, useEffect} from "react";
 import "./MainArea.css";
 import {useDispatch, useSelector} from "react-redux";
 import {v4 as uuiv4} from "uuid";
-//PAGE HOME
 export default function MainArea() {
-    //premiere etape ajout 2.
     const [inpInfo, setInpInfo] = useState({
         title: "",
         subtitle: "",
         body: "",
     });
-    //modifier 4.
     const [inpModify, setInpModify] = useState({
         title: "",
         subtitle: "",
@@ -28,16 +25,12 @@ export default function MainArea() {
     const [validation, setValidation] = useState(true);
 
 
-    //mettre a jour automatiquement les champs d'une notes
     const updateInputs = (e) => {
-        //je recupere l'id="" d'un <input>
         const actualInp = e.target.getAttribute("id");
         if (selected.toggle) {
-            // étape modification
             const newObjState = {...inpModify, [actualInp]: e.target.value};
             setInpModify(newObjState);
         } else if (selected.toggle === false) {
-            //premiere étape ajout
             const newObjState = {...inpInfo, [actualInp]: e.target.value};
             setInpInfo(newObjState);
         }
@@ -47,12 +40,10 @@ export default function MainArea() {
         e.preventDefault();
 
         if (selected.toggle) {
-            // Vérifier si le titre est vide
             if (selected.title.length < 1) {
                 setValidation(false)
                 return;
             }
-            // étape modification
             setValidation(true);
 
             dispatch({
@@ -68,7 +59,6 @@ export default function MainArea() {
                 body: ""
             })
         } else if (selected.toggle === false) {
-            //premiere étape ajout
             if (inpInfo.title.length < 1) {
                 setValidation(false);
                 return;
@@ -83,7 +73,6 @@ export default function MainArea() {
                     id: uuiv4(),
                 },
             });
-            //à la validation je supprime les infos affiché dans le form
             setInpInfo({
                 title: "",
                 subtitle: "",

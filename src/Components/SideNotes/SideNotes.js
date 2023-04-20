@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './SideNotes.css'
-import {useSelector, useDispatch} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 import Note from './Note/Note'
-//I/AFFICHAGE DES NOTES COTE DROITS 1.
-//AVEC BARRE DE RECHERCHE & AJOUT DES NOTES
 export default function SideNotes() {
 
     const {notes} = useSelector(state => state.notesReducer)
@@ -17,11 +14,8 @@ export default function SideNotes() {
 
     const preventForm = e => e.preventDefault()
 
-    //Barre de Recherche
     const handleFilter = e => {
         const stateCopy = [...notes];
-        //je filtre les notes par titre en minuscule
-        //qui ont en eux e.target.value (ce que j'ai cherché) dans leur titre
         const filteredArr = stateCopy.filter((item) =>
             item.title.toLowerCase().includes(e.target.value.toLowerCase()))
 
