@@ -38,8 +38,6 @@ export default function notesReducer(state = INITIAL_STATE, action) {
       const newObj = action.payload;
 
       const index = newNotesArr.findIndex((obj) => obj.id === newObj.id);
-      //a l'index qu'on a trv au dessus, on en supprime un &
-      //et on le remplace par newObj avec (splice)
       newNotesArr.splice(index, 1, newObj);
 
       return {
@@ -48,8 +46,6 @@ export default function notesReducer(state = INITIAL_STATE, action) {
     }
 
     case "DELETENOTE": {
-      //filter donc je retourne un nouveau tableau sans
-      //l'id de la note (action.payload)
       const newNotesArr = [...state.notes].filter(
         (note) => note.id !== action.payload
       );
